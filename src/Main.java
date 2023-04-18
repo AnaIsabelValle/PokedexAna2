@@ -85,6 +85,10 @@ import java.util.Scanner;
                                 System.out.println("El pokemon no ha sido avistado.");
                             }
                             break;
+                        case "d":
+                            System.out.println("Lista de pokemon avistados:");
+                            pokemon1.mostrarAvistamientos();
+                            break;
                 }
             }
         }
