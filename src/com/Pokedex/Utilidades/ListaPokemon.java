@@ -54,4 +54,14 @@ public class ListaPokemon {
                 }
                 return pokemonArray[indice];
         }
+
+        public int buscarPokemon(Pokemon nombre) {
+                for (int i = 0; i < totalPokemon; i++) {
+                        if (pokemonArray[i].getNombre().equals(nombre)) {
+                                return i;
+                        }
+                }
+                return -1;
+        }
 }
+
