@@ -46,6 +46,23 @@ import java.util.Scanner;
                             System.out.println("Se ha añadido el pokemon "
                                     + pokemon1.getNombre() + " a la lista de avistados.");
                             break;
+                        case "b":
+                            // Pedimos al usuario el nombre, tipo y localización del pokemon legendario a añadir
+                            System.out.print("Introduzca el nombre del pokemon legendario: ");
+                            String nombrePokemonLegendario = teclado.nextLine();
+                            System.out.print("Introduzca el tipo del pokemon legendario: ");
+                            String tipoPokemonLegendario = teclado.nextLine();
+                            System.out.print("Introduzca la localización del pokemon legendario: ");
+                            String localizacion = teclado.nextLine();
+                            // Creamos un objeto PokemonLegendario con los datos introducidos
+                            PokemonLegendario pokemonLegendario1 = new PokemonLegendario
+                                    (nombrePokemonLegendario, tipoPokemonLegendario, localizacion);
+                            // Añadimos el pokemon legendario a la lista de avistados
+                            avistados.añadirPokemon(pokemonLegendario1);
+                            // Mostramos un mensaje de confirmación
+                            System.out.println("Se ha añadido el pokemon legendario " +
+                                    pokemonLegendario1.getNombre() + " a la lista de avistados.");
+                            break;
                 }
             }
         }
