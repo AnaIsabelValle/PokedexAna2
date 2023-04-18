@@ -41,4 +41,17 @@ public class Pokemon {
                 return descripcion;
         }
 
+        public void setAltura(float altura) {
+                this.altura = altura;
+        }
+
+        public void setPeso(float peso) {
+                this.peso = peso;
+        }
+
+        public void setDescripcion(String descripcion) {
+                this.descripcion = descripcion;
+        }
+
+
 }
