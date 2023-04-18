@@ -89,6 +89,10 @@ import java.util.Scanner;
                             System.out.println("Lista de pokemon avistados:");
                             pokemon1.mostrarAvistamientos();
                             break;
+                        case "e":
+                            System.out.println("Lista de pokemon capturados:");
+                            pokemon1.mostrarCapturados();
+                            break;
                 }
             }
         }
