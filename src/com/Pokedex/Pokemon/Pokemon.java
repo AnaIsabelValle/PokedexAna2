@@ -53,5 +53,18 @@ public class Pokemon {
                 this.descripcion = descripcion;
         }
 
-
+        @Override
+        public String toString() {
+                return "Pokemon{" +
+                        "nombre='" + nombre + '\'' +
+                        ", tipo='" + tipo + '\'' +
+                        ", altura=" + altura +
+                        ", peso=" + (peso != 0f ? this.peso : "?") +
+                        ", descripcion='" + descripcion + '\'' +
+                        '}';
+        }
 }
+
+
+
+
