@@ -31,6 +31,21 @@ import java.util.Scanner;
                     System.out.print("Escoja una opción: ");
                     opcion = teclado.nextLine();
 
+                    switch (opcion) {
+                        case "a":
+                            // Pedimos al usuario el nombre y tipo del pokemon a añadir
+                            System.out.print("Introduzca el nombre del pokemon: ");
+                            String nombre = teclado.nextLine();
+                            System.out.print("Introduzca el tipo del pokemon: ");
+                            String tipo = teclado.nextLine();
+                            // Creamos un objeto Pokemon con los datos introducidos
+                            Pokemon pokemon1 = new Pokemon(nombre, tipo);
+                            // Añadimos el pokemon a la lista de avistados
+                            avistados.añadirPokemon(pokemon1);
+                            // Mostramos un mensaje de confirmación
+                            System.out.println("Se ha añadido el pokemon "
+                                    + pokemon1.getNombre() + " a la lista de avistados.");
+                            break;
                 }
             }
         }
