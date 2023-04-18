@@ -63,6 +63,28 @@ import java.util.Scanner;
                             System.out.println("Se ha añadido el pokemon legendario " +
                                     pokemonLegendario1.getNombre() + " a la lista de avistados.");
                             break;
+                        case "c":
+                            // Pedimos al usuario el nombre del pokemon a capturar
+                            System.out.print("Introduzca el nombre del pokemon a capturar: ");
+                            String nombreCapturar = teclado.nextLine();
+
+                            // Buscamos el pokemon en la lista de avistados
+                            ListaPokemon pokemonCapturar = avistados.buscarPokemon(nombreCapturar);
+
+                            if (pokemonCapturar != null) {
+                                System.out.println("Introduzca el peso del pokemon:");
+                                float peso = teclado.nextFloat();
+                                System.out.println("Introduzca la altura del pokemon:");
+                                float altura = teclado.nextFloat();
+                                System.out.println("Introduzca la descripción del pokemon:");
+                                String descripcion = teclado.nextLine();
+                                teclado.nextLine();
+                                pokemon1.agregarCapturado(new PokemonCapturado(pokemonCapturar.getNombre(), pokemonCapturar.getTipo(), peso, altura, descripcion));
+                                pokemon1.eliminarAvistamiento(pokemonCapturar);
+                            } else {
+                                System.out.println("El pokemon no ha sido avistado.");
+                            }
+                            break;
                 }
             }
         }
