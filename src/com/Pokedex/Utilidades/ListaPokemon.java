@@ -47,4 +47,11 @@ public class ListaPokemon {
                         }
                 }
         }
+
+        public Pokemon getPokemon(int indice) {
+                if (indice < 0 || indice >= totalPokemon) {
+                        return null;
+                }
+                return pokemonArray[indice];
+        }
 }
