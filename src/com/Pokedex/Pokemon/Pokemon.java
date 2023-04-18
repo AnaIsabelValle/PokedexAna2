@@ -20,4 +20,25 @@ public class Pokemon {
                 this.nombre = nombre;
                 this.tipo = tipo;
         }
+
+        public String getNombre() {
+                return nombre;
+        }
+
+        public String getTipo() {
+                return tipo;
+        }
+
+        public float getAltura() {
+                return altura;
+        }
+
+        public float getPeso() {
+                return peso;
+        }
+
+        public String getDescripcion() {
+                return descripcion;
+        }
+
 }
